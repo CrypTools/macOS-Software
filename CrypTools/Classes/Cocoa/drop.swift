@@ -51,11 +51,11 @@ class DropView: NSView {
     }
     
     override func draggingExited(_ sender: NSDraggingInfo?) {
-        self.layer?.backgroundColor = NSColor.gray.cgColor
+        self.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor
     }
     
     override func draggingEnded(_ sender: NSDraggingInfo) {
-        self.layer?.backgroundColor = NSColor.gray.cgColor
+        self.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor
     }
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {

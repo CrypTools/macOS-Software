@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  textController.swift
 //  CrypTools
 //
 //  Created by Arthur Guiot on 09/04/2018.
@@ -8,23 +8,21 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
-
+class TextController: NSViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.view.wantsLayer = true;
         self.view.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor;
-        
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-
-
+    
+    
 }
-

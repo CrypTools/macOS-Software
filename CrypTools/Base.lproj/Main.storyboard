@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="14019"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -684,35 +687,128 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="preferred" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA" customClass="EditorWindow" customModule="CrypTools" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="525" y="345" width="512" height="320"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
                         <value key="minSize" type="size" width="512" height="320"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
+                    <touchBar key="touchBar" id="CUt-Yg-FB6" customClass="TouchBar_Controller" customModule="CrypTools" customModuleProvider="target">
+                        <touchBarItems>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="E9U-DN-fL5"/>
+                            <touchBarItem id="eA7-pl-kvQ">
+                                <viewController key="viewController" id="Vkj-tj-606">
+                                    <textField key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Seb-bF-WiS">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="24"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="Shortcuts:" drawsBackground="YES" id="BDX-1j-EN7">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </viewController>
+                                <size key="designTimeSize" width="82" height="24"/>
+                            </touchBarItem>
+                            <touchBarItem id="YYD-sg-qf9">
+                                <viewController key="viewController" id="EQ4-ID-iv9">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GRr-Ko-K5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Website" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="aVK-ye-0NJ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="Website:" target="CUt-Yg-FB6" id="6PS-pV-cWq"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="mJR-LU-YiI">
+                                <viewController key="viewController" id="ybJ-OK-3w7">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pMv-XG-DBm">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="GitHub" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="y84-G6-Knk">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="GitHub:" target="CUt-Yg-FB6" id="9vo-Es-QEM"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="80" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="7zt-2R-zpo">
+                                <viewController key="viewController" id="dml-o8-8ot">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TWa-4Y-Kln">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Learn" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wy6-Tv-2yN">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="Learn:" target="CUt-Yg-FB6" id="2JE-uO-69i"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="jTn-bP-Myb"/>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="074-Px-X0u" kind="relationship" relationship="window.shadowedContentViewController" id="62a-oa-ZSB"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Tab View controller-->
+        <scene sceneID="xbn-4x-WrP">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="DropView" customModule="CrypTools" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="512" height="320"/>
+                <tabViewController selectedTabViewItemIndex="0" id="074-Px-X0u" customClass="TabView_controller" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="EKp-Xt-YZ0"/>
+                        <tabViewItem identifier="" id="ViL-HF-OmD"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="dZ6-Lz-yCL">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="074-Px-X0u" id="x2e-BA-RaA"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="dZ6-Lz-yCL" id="wcn-NC-yIY"/>
+                        <segue destination="MsW-Ko-qIu" kind="relationship" relationship="tabItems" id="B5H-vS-j5b"/>
+                        <segue destination="ssC-zh-3In" kind="relationship" relationship="tabItems" id="2Yn-QJ-eXd"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="5wG-ko-p5h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="717"/>
+        </scene>
+        <!--File-->
+        <scene sceneID="leS-kb-D6H">
+            <objects>
+                <viewController title="File" id="MsW-Ko-qIu" customClass="ViewController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="fjG-aB-Oko">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u1W-FQ-qQx">
-                                <rect key="frame" x="144" y="150" width="224" height="20"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop a file or start typing something" id="aec-rK-3Qy">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qj9-Y8-NRC">
+                                <rect key="frame" x="113" y="140" width="224" height="20"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop a file or start typing something" id="fgj-qC-4ay">
                                     <font key="font" size="14" name="SanFranciscoDisplay-Regular"/>
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -720,14 +816,105 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="u1W-FQ-qQx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="V6J-ge-7im"/>
-                            <constraint firstItem="u1W-FQ-qQx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="iNa-ij-rfY"/>
+                            <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="L1j-vM-196"/>
+                            <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="RIo-Ff-nYm"/>
                         </constraints>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="BG3-A0-dYY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="680"/>
+            <point key="canvasLocation" x="1159" y="503"/>
+        </scene>
+        <!--Text-->
+        <scene sceneID="UjP-bC-FMg">
+            <objects>
+                <viewController title="Text" id="ssC-zh-3In" customClass="TextController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="5Mf-vP-GZX">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-bV-S8K">
+                                <rect key="frame" x="44" y="201" width="362" height="79"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="KML-W0-Vxe">
+                                    <rect key="frame" x="1" y="1" width="345" height="77"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="biF-8E-pd2">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="345" height="77"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LiK-bV-S8K" secondAttribute="height" multiplier="362:79" id="zIN-7h-hPM"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="avA-mF-YCe">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KK8-tb-5BY">
+                                    <rect key="frame" x="346" y="1" width="15" height="77"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-Vc-Sbk">
+                                <rect key="frame" x="42" y="164" width="67" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Options:" id="t4J-Tu-SEj">
+                                    <font key="font" size="13" name="RobotoMono-Regular"/>
+                                    <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x2d-7g-WNh">
+                                <rect key="frame" x="42" y="128" width="88" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="xwN-Uo-b5S">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="GTH-hY-Fm1">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="o2q-jl-zWf"/>
+                                            <menuItem title="Item 2" id="jk3-fH-KDt"/>
+                                            <menuItem title="Item 3" id="Ifp-cv-SJE"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XpU-LH-yEQ">
+                                <rect key="frame" x="129" y="128" width="277" height="28"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" id="Tlc-1k-jFq">
+                                    <font key="font" size="13" name="RobotoMono-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="14" id="5XZ-gf-K0O"/>
+                            <constraint firstItem="LiK-bV-S8K" firstAttribute="top" secondItem="5Mf-vP-GZX" secondAttribute="top" constant="20" id="6of-To-XKn"/>
+                            <constraint firstItem="LiK-bV-S8K" firstAttribute="top" secondItem="5Mf-vP-GZX" secondAttribute="top" constant="20" symbolic="YES" id="Ivs-Pi-quj"/>
+                            <constraint firstItem="x2d-7g-WNh" firstAttribute="top" secondItem="X6o-Vc-Sbk" secondAttribute="bottom" constant="12" id="JRl-T4-XNA"/>
+                            <constraint firstAttribute="trailing" secondItem="LiK-bV-S8K" secondAttribute="trailing" constant="44" id="YJe-sO-PgG"/>
+                            <constraint firstItem="LiK-bV-S8K" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="ZIi-Wl-2qm"/>
+                            <constraint firstItem="LiK-bV-S8K" firstAttribute="centerX" secondItem="5Mf-vP-GZX" secondAttribute="centerX" id="eaS-ak-Ph5"/>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="14" id="edc-HU-gGX"/>
+                            <constraint firstAttribute="trailing" secondItem="XpU-LH-yEQ" secondAttribute="trailing" constant="44" id="euu-BW-66w"/>
+                            <constraint firstItem="LiK-bV-S8K" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="fhj-UX-vyz"/>
+                            <constraint firstItem="x2d-7g-WNh" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="hEy-xH-aeH"/>
+                            <constraint firstItem="x2d-7g-WNh" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="jIG-Dp-jOu"/>
+                            <constraint firstItem="x2d-7g-WNh" firstAttribute="top" secondItem="X6o-Vc-Sbk" secondAttribute="bottom" constant="12" id="pYy-Eo-rmc"/>
+                            <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="LiK-bV-S8K" secondAttribute="bottom" constant="14" id="ubW-tW-ntA"/>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="top" secondItem="LiK-bV-S8K" secondAttribute="bottom" constant="45" id="zGC-Na-Hdr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="e1W-Iq-IEb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="875"/>
         </scene>
     </scenes>
 </document>

@@ -8,23 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */; };
-		DDF07849207AFC7800B9EBF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* ViewController.swift */; };
+		DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* dropController.swift */; };
 		DDF0784B207AFC7900B9EBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */; };
 		DDF0784E207AFC7900B9EBF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784C207AFC7900B9EBF6 /* Main.storyboard */; };
 		DDF07857207AFED800B9EBF6 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07856207AFED800B9EBF6 /* NSColor.swift */; };
-		DDF07859207B021C00B9EBF6 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07858207B021C00B9EBF6 /* NSView.swift */; };
+		DDF07859207B021C00B9EBF6 /* drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07858207B021C00B9EBF6 /* drop.swift */; };
+		DDF0785B207B09B300B9EBF6 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0785A207B09B300B9EBF6 /* key.swift */; };
+		DDF0785F207B0ED500B9EBF6 /* textController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0785E207B0ED500B9EBF6 /* textController.swift */; };
+		DDF07867207B51B800B9EBF6 /* TabView controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07866207B51B800B9EBF6 /* TabView controller.swift */; };
+		DDF07869207B612D00B9EBF6 /* TouchBar Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDF07843207AFC7800B9EBF6 /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDF07848207AFC7800B9EBF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDF07848207AFC7800B9EBF6 /* dropController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropController.swift; sourceTree = "<group>"; };
 		DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF0784D207AFC7900B9EBF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF0784F207AFC7900B9EBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF07850207AFC7900B9EBF6 /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
 		DDF07856207AFED800B9EBF6 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
-		DDF07858207B021C00B9EBF6 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		DDF07858207B021C00B9EBF6 /* drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drop.swift; sourceTree = "<group>"; };
+		DDF0785A207B09B300B9EBF6 /* key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
+		DDF0785E207B0ED500B9EBF6 /* textController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textController.swift; sourceTree = "<group>"; };
+		DDF07866207B51B800B9EBF6 /* TabView controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView controller.swift"; sourceTree = "<group>"; };
+		DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TouchBar Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,16 +65,44 @@
 		DDF07845207AFC7800B9EBF6 /* CrypTools */ = {
 			isa = PBXGroup;
 			children = (
+				DDF07862207B4D1500B9EBF6 /* Classes */,
 				DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */,
-				DDF07848207AFC7800B9EBF6 /* ViewController.swift */,
-				DDF07856207AFED800B9EBF6 /* NSColor.swift */,
-				DDF07858207B021C00B9EBF6 /* NSView.swift */,
+				DDF07848207AFC7800B9EBF6 /* dropController.swift */,
 				DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */,
 				DDF0784C207AFC7900B9EBF6 /* Main.storyboard */,
 				DDF0784F207AFC7900B9EBF6 /* Info.plist */,
 				DDF07850207AFC7900B9EBF6 /* CrypTools.entitlements */,
+				DDF0785E207B0ED500B9EBF6 /* textController.swift */,
+				DDF07866207B51B800B9EBF6 /* TabView controller.swift */,
+				DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */,
 			);
 			path = CrypTools;
+			sourceTree = "<group>";
+		};
+		DDF07862207B4D1500B9EBF6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DDF07864207B4D2E00B9EBF6 /* Cocoa */,
+				DDF07863207B4D2200B9EBF6 /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DDF07863207B4D2200B9EBF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDF07856207AFED800B9EBF6 /* NSColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDF07864207B4D2E00B9EBF6 /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				DDF07858207B021C00B9EBF6 /* drop.swift */,
+				DDF0785A207B09B300B9EBF6 /* key.swift */,
+			);
+			path = Cocoa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,10 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF07849207AFC7800B9EBF6 /* ViewController.swift in Sources */,
+				DDF07869207B612D00B9EBF6 /* TouchBar Controller.swift in Sources */,
+				DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */,
 				DDF07857207AFED800B9EBF6 /* NSColor.swift in Sources */,
+				DDF0785F207B0ED500B9EBF6 /* textController.swift in Sources */,
 				DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */,
-				DDF07859207B021C00B9EBF6 /* NSView.swift in Sources */,
+				DDF07859207B021C00B9EBF6 /* drop.swift in Sources */,
+				DDF07867207B51B800B9EBF6 /* TabView controller.swift in Sources */,
+				DDF0785B207B09B300B9EBF6 /* key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
