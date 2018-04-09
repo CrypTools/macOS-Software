@@ -11,6 +11,8 @@
 		DDF07849207AFC7800B9EBF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* ViewController.swift */; };
 		DDF0784B207AFC7900B9EBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */; };
 		DDF0784E207AFC7900B9EBF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784C207AFC7900B9EBF6 /* Main.storyboard */; };
+		DDF07857207AFED800B9EBF6 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07856207AFED800B9EBF6 /* NSColor.swift */; };
+		DDF07859207B021C00B9EBF6 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07858207B021C00B9EBF6 /* NSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		DDF0784D207AFC7900B9EBF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF0784F207AFC7900B9EBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF07850207AFC7900B9EBF6 /* CrypTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CrypTools.entitlements; sourceTree = "<group>"; };
+		DDF07856207AFED800B9EBF6 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		DDF07858207B021C00B9EBF6 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */,
 				DDF07848207AFC7800B9EBF6 /* ViewController.swift */,
+				DDF07856207AFED800B9EBF6 /* NSColor.swift */,
+				DDF07858207B021C00B9EBF6 /* NSView.swift */,
 				DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */,
 				DDF0784C207AFC7900B9EBF6 /* Main.storyboard */,
 				DDF0784F207AFC7900B9EBF6 /* Info.plist */,
@@ -134,7 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF07849207AFC7800B9EBF6 /* ViewController.swift in Sources */,
+				DDF07857207AFED800B9EBF6 /* NSColor.swift in Sources */,
 				DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */,
+				DDF07859207B021C00B9EBF6 /* NSView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +286,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -297,6 +306,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

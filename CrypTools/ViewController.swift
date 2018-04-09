@@ -14,6 +14,9 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.wantsLayer = true;
+        self.view.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor;
+        
     }
 
     override var representedObject: Any? {
