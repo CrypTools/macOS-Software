@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD528B99207BA17500BA945D /* b64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD528B98207BA17500BA945D /* b64.swift */; };
 		DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */; };
 		DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* dropController.swift */; };
 		DDF0784B207AFC7900B9EBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD528B98207BA17500BA945D /* b64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b64.swift; sourceTree = "<group>"; };
 		DDF07843207AFC7800B9EBF6 /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF07848207AFC7800B9EBF6 /* dropController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				DDF0786B207B74C000B9EBF6 /* md5.swift */,
 				DDF0786F207B8AFA00B9EBF6 /* sha256.swift */,
+				DD528B98207BA17500BA945D /* b64.swift */,
 			);
 			path = Ciphers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD528B99207BA17500BA945D /* b64.swift in Sources */,
 				DDF07869207B612D00B9EBF6 /* TouchBar Controller.swift in Sources */,
 				DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */,
 				DDF0786C207B74C000B9EBF6 /* md5.swift in Sources */,
@@ -333,7 +337,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CrypTools/CrypTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;
@@ -353,7 +356,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CrypTools/CrypTools.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;

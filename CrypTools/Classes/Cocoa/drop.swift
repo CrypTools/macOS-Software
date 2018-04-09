@@ -10,8 +10,35 @@ import Cocoa
 
 class DropView: NSView {
     
+    @IBOutlet weak var Drop: NSTextField!
+    @IBOutlet weak var Load: NSTextField!
+    @IBOutlet weak var CipherSelect: NSPopUpButton!
+    @IBOutlet weak var Encrypt: NSButton!
+    
+    
     var filePath: String?
-    let expectedExt = ["jpg", "png"]  //file extensions allowed for Drag&Drop (example: "jpg","png","docx", etc..)
+    let expectedExt = [
+        "jpg",
+        "png",
+        "gif",
+        "txt",
+        "tiff",
+        "tif",
+        "mp3",
+        "mpeg",
+        "mpg",
+        "wav",
+        "docx",
+        "doc",
+        "svg",
+        "json",
+        "js",
+        "swift",
+        "c",
+        "md",
+        "pdf",
+        "zip"
+    ]  //file extensions allowed for Drag&Drop (example: "jpg","png","docx", etc..)
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -66,7 +93,28 @@ class DropView: NSView {
         //GET YOUR FILE PATH !!!
         self.filePath = path
         Swift.print("FilePath: \(path)")
-        
+        ask()
         return true
     }
+    func ask() {
+        Drop.isHidden = true
+        CipherSelect.isHidden = false
+        Encrypt.isHidden = false
+    }
+    @IBAction func ToggleEncrypt(_ sender: Any) {
+        let text = ""
+        let save = NSSavePanel()
+        save.begin(completionHandler: {
+            result in
+            if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
+                let filename = save.url
+                do {
+                    try text.write(to: filename!, atomically: true, encoding: String.Encoding.utf8)
+                } catch {
+                    
+                }
+            }
+        })
+    }
+    
 }

@@ -779,6 +779,7 @@
                         <tabViewItem identifier="" id="EKp-Xt-YZ0"/>
                         <tabViewItem identifier="" id="ViL-HF-OmD"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" slideLeft="YES" slideForward="YES" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="dZ6-Lz-yCL">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -795,13 +796,13 @@
                 </tabViewController>
                 <customObject id="5wG-ko-p5h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="717"/>
+            <point key="canvasLocation" x="119" y="748"/>
         </scene>
         <!--File-->
         <scene sceneID="leS-kb-D6H">
             <objects>
                 <viewController title="File" id="MsW-Ko-qIu" customClass="ViewController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="fjG-aB-Oko">
+                    <view key="view" id="fjG-aB-Oko" customClass="DropView" customModule="CrypTools" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -813,12 +814,60 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-pb-z7g">
+                                <rect key="frame" x="194" y="140" width="62" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Loading..." id="13y-qH-1B6">
+                                    <font key="font" size="13" name="SanFranciscoDisplay-Regular"/>
+                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-8V-eh2">
+                                <rect key="frame" x="145" y="165" width="162" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="sgy-JM-MKC" id="DNq-f3-OEz">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="yYg-Hc-k1G">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="sgy-JM-MKC"/>
+                                            <menuItem title="Item 2" id="T5C-PI-3r4"/>
+                                            <menuItem title="Item 3" id="S4w-3G-Y2Q"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-R7-099">
+                                <rect key="frame" x="182" y="104" width="87" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xso-5r-AOo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ToggleEncrypt:" target="fjG-aB-Oko" id="DLX-aL-V3J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="L1j-vM-196"/>
                             <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="RIo-Ff-nYm"/>
+                            <constraint firstItem="JuP-pb-z7g" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="fXJ-Di-uVv"/>
+                            <constraint firstItem="JuP-pb-z7g" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="uDo-Qt-r1D"/>
                         </constraints>
+                        <connections>
+                            <outlet property="CipherSelect" destination="ssA-8V-eh2" id="tIG-L5-rnc"/>
+                            <outlet property="Drop" destination="Qj9-Y8-NRC" id="3jW-ip-VeU"/>
+                            <outlet property="Encrypt" destination="UNk-R7-099" id="yAj-t1-JGS"/>
+                            <outlet property="Load" destination="JuP-pb-z7g" id="2fI-9u-LX3"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="CipherSelect" destination="ssA-8V-eh2" id="DIb-cS-Wv3"/>
+                        <outlet property="Drop" destination="Qj9-Y8-NRC" id="9YS-zk-pgt"/>
+                        <outlet property="Encrypt" destination="UNk-R7-099" id="VPz-Tk-kER"/>
+                        <outlet property="Load" destination="JuP-pb-z7g" id="icl-AR-juK"/>
+                    </connections>
                 </viewController>
                 <customObject id="BG3-A0-dYY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -856,10 +905,10 @@
                                 </constraints>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="xwN-Uo-b5S">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="GTH-hY-Fm1">
                                         <items>
-                                            <menuItem title="Item 1" state="on" id="o2q-jl-zWf"/>
+                                            <menuItem title="Item 1" id="o2q-jl-zWf"/>
                                             <menuItem title="Item 2" id="jk3-fH-KDt"/>
                                             <menuItem title="Item 3" id="Ifp-cv-SJE"/>
                                         </items>
@@ -874,7 +923,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Lrq-7c-PkR"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Multiline Label" id="VXE-I6-8Nw">
+                                <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" title="Multiline Label" id="VXE-I6-8Nw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
