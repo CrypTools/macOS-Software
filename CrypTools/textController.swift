@@ -27,11 +27,13 @@ class TextController: NSViewController {
         Hash(nil)
         let c = Ciphers()
         CipherSelect.addItems(withTitles: c.name)
+        TextOut.isSelectable = true
     }
     
     @IBAction func Encoder(_ sender: Any) {
         let i = CipherSelect.indexOfSelectedItem
         self.coder = Ciphers().name[i]
+        Hash(nil)
     }
     @IBAction func Hash(_ sender: Any?) {
         let c = Ciphers()

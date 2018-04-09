@@ -21,6 +21,14 @@ class Ciphers {
         return call[i!] as! f
     }
     init() {
+        self.add("Base64 - Encrypt", {
+            text, key in
+            return text.b64encrypt
+        })
+        self.add("Base64 - Decrypt", {
+            text, key in
+            return text.b64decrypt!
+        })
         self.add("md5", {
             text, key in
             return text.md5
