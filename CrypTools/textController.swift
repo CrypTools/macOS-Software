@@ -33,12 +33,19 @@ class TextController: NSViewController {
     @IBAction func Encoder(_ sender: Any) {
         let i = CipherSelect.indexOfSelectedItem
         self.coder = Ciphers().name[i]
+        TextIn.stringValue = ""
         Hash(nil)
     }
     @IBAction func Hash(_ sender: Any?) {
         let c = Ciphers()
         let fe = c.get(self.coder)
-        TextOut.stringValue = fe(TextIn.stringValue, Key.stringValue)
+        var out = ""
+        do {
+            out = try fe(TextIn.stringValue, Key.stringValue)
+        } catch {
+            out = "Error!"
+        }
+        TextOut.stringValue = out
     }
     override var representedObject: Any? {
         didSet {

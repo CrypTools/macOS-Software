@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD528B99207BA17500BA945D /* b64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD528B98207BA17500BA945D /* b64.swift */; };
+		DDCC00EE207CD5FE00BEFDAA /* expectedExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */; };
 		DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */; };
 		DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* dropController.swift */; };
 		DDF0784B207AFC7900B9EBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		DD528B98207BA17500BA945D /* b64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b64.swift; sourceTree = "<group>"; };
+		DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expectedExt.swift; sourceTree = "<group>"; };
 		DDF07843207AFC7800B9EBF6 /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF07848207AFC7800B9EBF6 /* dropController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DDF0785E207B0ED500B9EBF6 /* textController.swift */,
 				DDF07866207B51B800B9EBF6 /* TabView controller.swift */,
 				DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */,
+				DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */,
 			);
 			path = CrypTools;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				DDF0786E207B7D0000B9EBF6 /* ciphers.swift in Sources */,
 				DDF07870207B8AFA00B9EBF6 /* sha256.swift in Sources */,
 				DDF07867207B51B800B9EBF6 /* TabView controller.swift in Sources */,
+				DDCC00EE207CD5FE00BEFDAA /* expectedExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

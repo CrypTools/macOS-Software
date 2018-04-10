@@ -14,31 +14,12 @@ class DropView: NSView {
     @IBOutlet weak var Load: NSTextField!
     @IBOutlet weak var CipherSelect: NSPopUpButton!
     @IBOutlet weak var Encrypt: NSButton!
+    @IBOutlet weak var Key: NSTextField!
     
+    var coder = Ciphers().name[0]
     
     var filePath: String?
-    let expectedExt = [
-        "jpg",
-        "png",
-        "gif",
-        "txt",
-        "tiff",
-        "tif",
-        "mp3",
-        "mpeg",
-        "mpg",
-        "wav",
-        "docx",
-        "doc",
-        "svg",
-        "json",
-        "js",
-        "swift",
-        "c",
-        "md",
-        "pdf",
-        "zip"
-    ]  //file extensions allowed for Drag&Drop (example: "jpg","png","docx", etc..)
+    let expectedExt = Extensions().ext
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -98,23 +79,44 @@ class DropView: NSView {
     }
     func ask() {
         Drop.isHidden = true
+        Key.isHidden = false
         CipherSelect.isHidden = false
         Encrypt.isHidden = false
     }
+    @IBAction func Encoder(_ sender: Any) {
+        let i = CipherSelect.indexOfSelectedItem
+        self.coder = Ciphers().name[i]
+    }
     @IBAction func ToggleEncrypt(_ sender: Any) {
-        let text = ""
-        let save = NSSavePanel()
-        save.begin(completionHandler: {
-            result in
-            if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
-                let filename = save.url
-                do {
-                    try text.write(to: filename!, atomically: true, encoding: String.Encoding.utf8)
-                } catch {
-                    
+        func dialogOKCancel(question: String, text: String) -> Bool {
+            let alert = NSAlert()
+            alert.messageText = question
+            alert.informativeText = text
+            alert.alertStyle = .warning
+            alert.addButton(withTitle: "OK")
+            alert.addButton(withTitle: "Cancel")
+            return alert.runModal() == .alertFirstButtonReturn
+        }
+        do {
+            let input = try NSString( contentsOfFile: self.filePath!, encoding: String.Encoding.utf8.rawValue )
+            let c = Ciphers()
+            let fe = c.get(self.coder)
+            let text = fe(input as String, Key.stringValue)
+            let save = NSSavePanel()
+            save.begin(completionHandler: {
+                result in
+                if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
+                    let filename = save.url
+                    do {
+                        try text.write(to: filename!, atomically: true, encoding: String.Encoding.utf8)
+                    } catch {
+                        _ = dialogOKCancel(question: "Error 1", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
+                    }
                 }
-            }
-        })
+            })
+        } catch {
+            _ = dialogOKCancel(question: "Error 0", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
+        }
     }
     
 }

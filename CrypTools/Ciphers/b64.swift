@@ -23,7 +23,9 @@ extension String {
     
     /// Decode a String from Base64. Returns nil if unsuccessful.
     var b64decrypt: String? {
-        guard let data = Data(base64Encoded: self) else { return nil }
+        guard let data = Data(base64Encoded: self) else {
+            return "Error!"
+        }
         return String(data: data, encoding: .utf8)
     }
 }

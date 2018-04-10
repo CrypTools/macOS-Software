@@ -822,9 +822,35 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-8V-eh2">
-                                <rect key="frame" x="145" y="165" width="162" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-R7-099">
+                                <rect key="frame" x="182" y="101" width="87" height="32"/>
+                                <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xso-5r-AOo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ToggleEncrypt:" target="fjG-aB-Oko" id="DLX-aL-V3J"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6UO-4D-ffb">
+                                <rect key="frame" x="115" y="136" width="220" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Nrz-Iu-9fL"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" id="Pdb-h9-mwx">
+                                    <font key="font" size="13" name="RobotoMono-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-8V-eh2">
+                                <rect key="frame" x="113" y="164" width="225" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="2cc-hz-1NP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="4Oo-S6-s7C"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="U4j-Go-QNN"/>
+                                    <constraint firstAttribute="height" constant="21" id="oxR-DQ-NSt"/>
+                                </constraints>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="sgy-JM-MKC" id="DNq-f3-OEz">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -836,29 +862,28 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
-                            </popUpButton>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-R7-099">
-                                <rect key="frame" x="182" y="104" width="87" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Encrypt" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xso-5r-AOo">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
                                 <connections>
-                                    <action selector="ToggleEncrypt:" target="fjG-aB-Oko" id="DLX-aL-V3J"/>
+                                    <action selector="Encoder:" target="fjG-aB-Oko" id="Z5l-s5-1Di"/>
                                 </connections>
-                            </button>
+                            </popUpButton>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="6UO-4D-ffb" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="5P3-Lq-IcN"/>
+                            <constraint firstItem="ssA-8V-eh2" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="DAE-Rj-UV3"/>
                             <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="L1j-vM-196"/>
                             <constraint firstItem="Qj9-Y8-NRC" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="RIo-Ff-nYm"/>
+                            <constraint firstItem="UNk-R7-099" firstAttribute="top" secondItem="6UO-4D-ffb" secondAttribute="bottom" constant="7" id="a6x-Al-9Ak"/>
+                            <constraint firstItem="UNk-R7-099" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="bcl-xV-KxN"/>
                             <constraint firstItem="JuP-pb-z7g" firstAttribute="centerY" secondItem="fjG-aB-Oko" secondAttribute="centerY" id="fXJ-Di-uVv"/>
                             <constraint firstItem="JuP-pb-z7g" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="uDo-Qt-r1D"/>
+                            <constraint firstItem="Qj9-Y8-NRC" firstAttribute="top" secondItem="ssA-8V-eh2" secondAttribute="bottom" constant="7" id="xqa-fD-AYT"/>
+                            <constraint firstItem="6UO-4D-ffb" firstAttribute="centerX" secondItem="fjG-aB-Oko" secondAttribute="centerX" id="zFH-oD-gaU"/>
                         </constraints>
                         <connections>
                             <outlet property="CipherSelect" destination="ssA-8V-eh2" id="tIG-L5-rnc"/>
                             <outlet property="Drop" destination="Qj9-Y8-NRC" id="3jW-ip-VeU"/>
                             <outlet property="Encrypt" destination="UNk-R7-099" id="yAj-t1-JGS"/>
+                            <outlet property="Key" destination="6UO-4D-ffb" id="zK7-La-39P"/>
                             <outlet property="Load" destination="JuP-pb-z7g" id="2fI-9u-LX3"/>
                         </connections>
                     </view>
@@ -866,6 +891,7 @@
                         <outlet property="CipherSelect" destination="ssA-8V-eh2" id="DIb-cS-Wv3"/>
                         <outlet property="Drop" destination="Qj9-Y8-NRC" id="9YS-zk-pgt"/>
                         <outlet property="Encrypt" destination="UNk-R7-099" id="VPz-Tk-kER"/>
+                        <outlet property="Key" destination="6UO-4D-ffb" id="vut-mp-DE1"/>
                         <outlet property="Load" destination="JuP-pb-z7g" id="icl-AR-juK"/>
                     </connections>
                 </viewController>
@@ -881,7 +907,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-Vc-Sbk">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-Vc-Sbk">
                                 <rect key="frame" x="42" y="167" width="67" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Options:" id="t4J-Tu-SEj">
                                     <font key="font" size="13" name="RobotoMono-Regular"/>
@@ -898,10 +924,10 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x2d-7g-WNh">
-                                <rect key="frame" x="42" y="128" width="130" height="26"/>
+                                <rect key="frame" x="42" y="128" width="76" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="l5v-xD-ILW"/>
-                                    <constraint firstAttribute="width" constant="125" id="t0R-H2-3aA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="t0R-H2-3aA"/>
                                 </constraints>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="xwN-Uo-b5S">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -957,6 +983,7 @@
                         <constraints>
                             <constraint firstItem="GfW-CD-O8s" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="45" id="2O7-Qg-dug"/>
                             <constraint firstAttribute="trailing" secondItem="3bl-eG-oFT" secondAttribute="trailing" constant="44" id="5lC-hp-dJU"/>
+                            <constraint firstItem="X6o-Vc-Sbk" firstAttribute="leading" secondItem="x2d-7g-WNh" secondAttribute="leading" id="BTp-aq-eR7"/>
                             <constraint firstItem="x2d-7g-WNh" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="DBr-lU-xM4"/>
                             <constraint firstAttribute="trailing" secondItem="GfW-CD-O8s" secondAttribute="trailing" constant="45" id="JGI-46-tpa"/>
                             <constraint firstAttribute="trailing" secondItem="XpU-LH-yEQ" secondAttribute="trailing" constant="44" id="Lxs-VX-kYY"/>
@@ -964,13 +991,17 @@
                             <constraint firstAttribute="bottom" secondItem="GfW-CD-O8s" secondAttribute="bottom" constant="30" id="RlH-13-jzA"/>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="15" id="S7h-Mu-axI"/>
                             <constraint firstItem="3bl-eG-oFT" firstAttribute="top" secondItem="5Mf-vP-GZX" secondAttribute="top" constant="20" id="SZf-7B-VKH"/>
-                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="13" id="WRq-a1-Bgn"/>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="8" symbolic="YES" id="WRq-a1-Bgn"/>
+                            <constraint firstItem="Dxe-2Z-I6i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="20" symbolic="YES" id="b3d-Qx-ol3"/>
                             <constraint firstItem="XpU-LH-yEQ" firstAttribute="top" secondItem="Dxe-2Z-I6i" secondAttribute="bottom" constant="4" id="cdt-VS-rm6"/>
                             <constraint firstItem="GfW-CD-O8s" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="45" id="fFr-65-MwE"/>
-                            <constraint firstAttribute="trailing" secondItem="GfW-CD-O8s" secondAttribute="trailing" constant="45" id="iiq-IX-Rui"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X6o-Vc-Sbk" secondAttribute="trailing" constant="20" symbolic="YES" id="h39-gN-vzD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GfW-CD-O8s" secondAttribute="trailing" id="iiq-IX-Rui"/>
                             <constraint firstAttribute="bottom" secondItem="GfW-CD-O8s" secondAttribute="bottom" constant="30" id="pvq-qY-pb6"/>
                             <constraint firstItem="x2d-7g-WNh" firstAttribute="top" secondItem="X6o-Vc-Sbk" secondAttribute="bottom" constant="15" id="rAS-7r-VFm"/>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="67" id="vj9-WX-g5X"/>
                             <constraint firstAttribute="trailing" secondItem="Dxe-2Z-I6i" secondAttribute="trailing" constant="49" id="w38-YA-g4T"/>
+                            <constraint firstItem="XpU-LH-yEQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x2d-7g-WNh" secondAttribute="trailing" constant="8" symbolic="YES" id="wDy-rR-lpD"/>
                             <constraint firstItem="Dxe-2Z-I6i" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="25" id="zmY-6x-D4H"/>
                         </constraints>
                     </view>
