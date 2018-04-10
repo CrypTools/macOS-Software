@@ -27,7 +27,11 @@ class TextController: NSViewController {
         Hash(nil)
         let c = Ciphers()
         CipherSelect.addItems(withTitles: c.name)
-        TextOut.isSelectable = true
+        
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return $0
+        }
     }
     
     @IBAction func Encoder(_ sender: Any) {
@@ -51,5 +55,9 @@ class TextController: NSViewController {
         didSet {
             // Update the view, if already loaded.
         }
+    }
+    override func keyDown(with event: NSEvent) {
+        super.keyDown(with: event)
+        Hash(nil)
     }
 }

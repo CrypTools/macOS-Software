@@ -903,7 +903,7 @@
         <scene sceneID="UjP-bC-FMg">
             <objects>
                 <viewController title="Text" id="ssC-zh-3In" customClass="TextController" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="5Mf-vP-GZX">
+                    <view key="view" id="5Mf-vP-GZX" customClass="TextView" customModule="CrypTools" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -917,7 +917,7 @@
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XpU-LH-yEQ">
                                 <rect key="frame" x="182" y="127" width="224" height="28"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" id="Tlc-1k-jFq">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Key" drawsBackground="YES" id="Tlc-1k-jFq">
                                     <font key="font" size="13" name="RobotoMono-Regular"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
@@ -949,7 +949,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Lrq-7c-PkR"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" title="Multiline Label" id="VXE-I6-8Nw">
+                                <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" sendsActionOnEndEditing="YES" title="Multiline Label" id="VXE-I6-8Nw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
@@ -965,15 +965,15 @@
                                     <action selector="Hash:" target="ssC-zh-3In" id="aWL-5J-HkX"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3bl-eG-oFT">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bl-eG-oFT">
                                 <rect key="frame" x="44" y="205" width="362" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Y9b-T0-XeZ"/>
                                 </constraints>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yD8-ao-pt1">
+                                <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Input Text" drawsBackground="YES" id="yD8-ao-pt1">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
                                     <action selector="Hash:" target="ssC-zh-3In" id="VCk-r0-kiz"/>
