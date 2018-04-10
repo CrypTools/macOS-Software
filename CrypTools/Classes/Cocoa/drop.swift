@@ -29,7 +29,9 @@ class DropView: NSView {
         
         registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
     }
-    
+    override func performKeyEquivalent(with event: NSEvent) -> Bool {
+        return true
+    }
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         // Drawing code here.
@@ -97,18 +99,23 @@ class DropView: NSView {
             alert.addButton(withTitle: "Cancel")
             return alert.runModal() == .alertFirstButtonReturn
         }
+        Key.isHidden = true
+        CipherSelect.isHidden = true
+        Encrypt.isHidden = true
+        Load.isHidden = false
         do {
             let input = try NSString( contentsOfFile: self.filePath!, encoding: String.Encoding.utf8.rawValue )
-            let c = Ciphers()
-            let fe = c.get(self.coder)
-            let text = fe(input as String, Key.stringValue)
             let save = NSSavePanel()
             save.begin(completionHandler: {
                 result in
+                let c = Ciphers()
+                let fe = c.get(self.coder)
+                let text = fe(input as String, self.Key.stringValue)
                 if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
                     let filename = save.url
                     do {
                         try text.write(to: filename!, atomically: true, encoding: String.Encoding.utf8)
+                        _ = dialogOKCancel(question: "Done", text: "Your file was succefully saved at \(save.url!)")
                     } catch {
                         _ = dialogOKCancel(question: "Error 1", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
                     }
@@ -117,6 +124,9 @@ class DropView: NSView {
         } catch {
             _ = dialogOKCancel(question: "Error 0", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
         }
+        // Hides everything back
+        Load.isHidden = true
+        Drop.isHidden = false
     }
     
 }

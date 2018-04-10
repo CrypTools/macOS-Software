@@ -47,7 +47,7 @@ extension String {
                              "Z" ]
         var out = ""
         for i in self.uppercased() {
-            out += emojis[lettersArray.index(of: String(i))!]
+            out += emojis[lettersArray.index(of: String(i)) ?? 0]
         }
         return out
     }
@@ -81,7 +81,7 @@ extension String {
                              "Z" ]
         var out = ""
         for i in self.uppercased() {
-            out += lettersArray[emojis.index(of: String(i))!]
+            out += lettersArray[emojis.index(of: String(i)) ?? 0]
         }
         return out
     }
