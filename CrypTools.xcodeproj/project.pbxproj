@@ -11,6 +11,7 @@
 		DDCC00EE207CD5FE00BEFDAA /* expectedExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */; };
 		DDCC00F1207CDB6900BEFDAA /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00F0207CDB6900BEFDAA /* TextView.swift */; };
 		DDCC00F3207CE13200BEFDAA /* caesar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00F2207CE13200BEFDAA /* caesar.swift */; };
+		DDCC00F5207CE28000BEFDAA /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00F4207CE28000BEFDAA /* Emoji.swift */; };
 		DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */; };
 		DDF07849207AFC7800B9EBF6 /* dropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF07848207AFC7800B9EBF6 /* dropController.swift */; };
 		DDF0784B207AFC7900B9EBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF0784A207AFC7900B9EBF6 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expectedExt.swift; sourceTree = "<group>"; };
 		DDCC00F0207CDB6900BEFDAA /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		DDCC00F2207CE13200BEFDAA /* caesar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caesar.swift; sourceTree = "<group>"; };
+		DDCC00F4207CE28000BEFDAA /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		DDF07843207AFC7800B9EBF6 /* CrypTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF07848207AFC7800B9EBF6 /* dropController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				DDF0786F207B8AFA00B9EBF6 /* sha256.swift */,
 				DD528B98207BA17500BA945D /* b64.swift */,
 				DDCC00F2207CE13200BEFDAA /* caesar.swift */,
+				DDCC00F4207CE28000BEFDAA /* Emoji.swift */,
 			);
 			path = Ciphers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCC00F5207CE28000BEFDAA /* Emoji.swift in Sources */,
 				DD528B99207BA17500BA945D /* b64.swift in Sources */,
 				DDF07869207B612D00B9EBF6 /* TouchBar Controller.swift in Sources */,
 				DDCC00F3207CE13200BEFDAA /* caesar.swift in Sources */,

@@ -15,7 +15,11 @@
  *
  *********************************/
 extension String {
-    func CaesarEncrypt(_ n: Int) -> String {
+    func CaesarEncrypt(_ N: Int?) -> String {
+        var n = 0
+        if N != nil {
+            n = N!
+        }
         var out = "";
         let unicode = Array(self.unicodeScalars.map { $0.value }).map { Int($0) }
         for i in unicode {
@@ -23,7 +27,11 @@ extension String {
         }
         return out
     }
-    func CaesarDecrypt(_ n: Int) -> String {
+    func CaesarDecrypt(_ N: Int?) -> String {
+        var n = 0
+        if N != nil {
+            n = N!
+        }
         var out = "";
         let unicode = Array(self.unicodeScalars.map { $0.value }).map { Int($0) }
         for i in unicode {
