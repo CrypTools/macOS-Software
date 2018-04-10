@@ -29,15 +29,6 @@ class Ciphers {
             text, key in
             return text.CaesarDecrypt(Int(key))
         })
-
-        self.add("Emoji - Encrypt", {
-            text, key in
-            return text.EmojiEncrypt
-        })
-        self.add("Emoji - Decrypt", {
-            text, key in
-            return text.EmojiDecrypt
-        })
         self.add("Base64 - Encrypt", {
             text, key in
             return text.b64encrypt
@@ -45,6 +36,22 @@ class Ciphers {
         self.add("Base64 - Decrypt", {
             text, key in
             return text.b64decrypt!
+        })
+        self.add("BitShift - Encrypt", {
+            text, key in
+            return text.BitShiftEncrypt(key)
+        })
+        self.add("BitShift - Decrypt", {
+            text, key in
+            return text.BitShiftDecrypt(key)
+        })
+        self.add("Emoji - Encrypt", {
+            text, key in
+            return text.EmojiEncrypt
+        })
+        self.add("Emoji - Decrypt", {
+            text, key in
+            return text.EmojiDecrypt
         })
         self.add("md5", {
             text, key in
