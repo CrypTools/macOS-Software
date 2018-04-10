@@ -1,0 +1,5 @@
+language: swift
+script:
+  - xcodebuild
+notifications:
+  email: false
