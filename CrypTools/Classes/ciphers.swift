@@ -12,7 +12,7 @@ typealias f = (_ text: String, _ key: Any) -> String
 class Ciphers {
     var name = [String]()
     var call = [Any]()
-    func add(_ name: String, _ callback: (_ text: String, _ key: Any) -> String) {
+    func add(_ name: String, _ callback: (_ text: String, _ key: String) -> String) {
         self.name.append(name)
         self.call.append(callback)
     }
@@ -21,6 +21,14 @@ class Ciphers {
         return call[i!] as! f
     }
     init() {
+        self.add("Caesar - Encrypt", {
+            text, key in
+            return text.CaesarEncrypt(Int(key)!)
+        })
+        self.add("Caesar - Decrypt", {
+            text, key in
+            return text.CaesarDecrypt(Int(key)!)
+        })
         self.add("Base64 - Encrypt", {
             text, key in
             return text.b64encrypt
