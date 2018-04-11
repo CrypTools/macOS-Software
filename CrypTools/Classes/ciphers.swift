@@ -61,5 +61,13 @@ class Ciphers {
             text, key in
             return text.sha256
         })
+        self.add("XOR - Encrypt", {
+            text, key in
+            return text.XOREncrypt([Int(key) ?? 2])
+        })
+        self.add("XOR - Decrypt", {
+            text, key in
+            return text.XORDecrypt([Int(key) ?? 2])
+        })
     }
 }
