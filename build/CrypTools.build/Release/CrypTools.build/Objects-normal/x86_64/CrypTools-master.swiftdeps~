@@ -1,0 +1,21 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "1880e4c41d21b4f94a9a79b821bb8761"
+build_time: [1523461421, 358977000]
+inputs:
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/XOR.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/Emoji.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/b64.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/TouchBar Controller.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/caesar.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/dropController.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Classes/Cocoa/TextView.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/BitShift.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/md5.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Classes/Extensions/NSColor.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/textController.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Classes/Cocoa/drop.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Classes/ciphers.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/Ciphers/sha256.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/TabView controller.swift": [9223372036, 854775807]
+  "/Users/Arthur-Guiot/CrypTools/CrypTools/CrypTools/expectedExt.swift": [9223372036, 854775807]

@@ -26,6 +26,7 @@
 		DDF0786C207B74C000B9EBF6 /* md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0786B207B74C000B9EBF6 /* md5.swift */; };
 		DDF0786E207B7D0000B9EBF6 /* ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0786D207B7D0000B9EBF6 /* ciphers.swift */; };
 		DDF07870207B8AFA00B9EBF6 /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0786F207B8AFA00B9EBF6 /* sha256.swift */; };
+		DDF36832207E641F00ACCD06 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF36831207E641F00ACCD06 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,9 @@
 		DDF0786B207B74C000B9EBF6 /* md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5.swift; sourceTree = "<group>"; };
 		DDF0786D207B7D0000B9EBF6 /* ciphers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ciphers.swift; sourceTree = "<group>"; };
 		DDF0786F207B8AFA00B9EBF6 /* sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha256.swift; sourceTree = "<group>"; };
+		DDF3682E207E638500ACCD06 /* CrypTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrypTools-Bridging-Header.h"; sourceTree = "<group>"; };
+		DDF36830207E641F00ACCD06 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
+		DDF36831207E641F00ACCD06 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		DDF07845207AFC7800B9EBF6 /* CrypTools */ = {
 			isa = PBXGroup;
 			children = (
+				DDF3682F207E641F00ACCD06 /* Plugins */,
 				DDF0786A207B6BB200B9EBF6 /* Ciphers */,
 				DDF07862207B4D1500B9EBF6 /* Classes */,
 				DDF07846207AFC7800B9EBF6 /* AppDelegate.swift */,
@@ -95,6 +100,7 @@
 				DDF07866207B51B800B9EBF6 /* TabView controller.swift */,
 				DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */,
 				DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */,
+				DDF3682E207E638500ACCD06 /* CrypTools-Bridging-Header.h */,
 			);
 			path = CrypTools;
 			sourceTree = "<group>";
@@ -140,6 +146,15 @@
 			path = Ciphers;
 			sourceTree = "<group>";
 		};
+		DDF3682F207E641F00ACCD06 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				DDF36830207E641F00ACCD06 /* PFMoveApplication.h */,
+				DDF36831207E641F00ACCD06 /* PFMoveApplication.m */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +187,7 @@
 				TargetAttributes = {
 					DDF07842207AFC7800B9EBF6 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -221,6 +237,7 @@
 				DDF0786C207B74C000B9EBF6 /* md5.swift in Sources */,
 				DDF07857207AFED800B9EBF6 /* NSColor.swift in Sources */,
 				DDF0785F207B0ED500B9EBF6 /* textController.swift in Sources */,
+				DDF36832207E641F00ACCD06 /* PFMoveApplication.m in Sources */,
 				DDF07847207AFC7800B9EBF6 /* AppDelegate.swift in Sources */,
 				DDF07859207B021C00B9EBF6 /* drop.swift in Sources */,
 				DDF0786E207B7D0000B9EBF6 /* ciphers.swift in Sources */,
@@ -361,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -374,6 +392,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrypTools/CrypTools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -382,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -395,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arguiot.CrypTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrypTools/CrypTools-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
