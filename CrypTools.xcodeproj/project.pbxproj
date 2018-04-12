@@ -38,6 +38,8 @@
 		DD3E5BC5207E5DC20059356E /* XOR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOR.swift; sourceTree = "<group>"; };
 		DD528B98207BA17500BA945D /* b64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b64.swift; sourceTree = "<group>"; };
 		DD59B378207F864800BA3C99 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		DD59B37C207F88F100BA3C99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DD59B380207F8AE900BA3C99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expectedExt.swift; sourceTree = "<group>"; };
 		DDCC00F0207CDB6900BEFDAA /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		DDCC00F2207CE13200BEFDAA /* caesar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caesar.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = DDF0783A207AFC7800B9EBF6;
 			productRefGroup = DDF07844207AFC7800B9EBF6 /* Products */;
@@ -283,6 +286,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DDF0784D207AFC7900B9EBF6 /* Base */,
+				DD59B37C207F88F100BA3C99 /* en */,
+				DD59B380207F8AE900BA3C99 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
