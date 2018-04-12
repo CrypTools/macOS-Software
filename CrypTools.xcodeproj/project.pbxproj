@@ -11,6 +11,7 @@
 		DD1877AB207F3A1A00BBCA82 /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1877AA207F3A1900BBCA82 /* ROT13.swift */; };
 		DD3E5BC6207E5DC20059356E /* XOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E5BC5207E5DC20059356E /* XOR.swift */; };
 		DD528B99207BA17500BA945D /* b64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD528B98207BA17500BA945D /* b64.swift */; };
+		DD59B379207F864800BA3C99 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD59B378207F864800BA3C99 /* Window.swift */; };
 		DDCC00EE207CD5FE00BEFDAA /* expectedExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */; };
 		DDCC00F1207CDB6900BEFDAA /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00F0207CDB6900BEFDAA /* TextView.swift */; };
 		DDCC00F3207CE13200BEFDAA /* caesar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC00F2207CE13200BEFDAA /* caesar.swift */; };
@@ -36,6 +37,7 @@
 		DD1877AA207F3A1900BBCA82 /* ROT13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 		DD3E5BC5207E5DC20059356E /* XOR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOR.swift; sourceTree = "<group>"; };
 		DD528B98207BA17500BA945D /* b64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b64.swift; sourceTree = "<group>"; };
+		DD59B378207F864800BA3C99 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expectedExt.swift; sourceTree = "<group>"; };
 		DDCC00F0207CDB6900BEFDAA /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		DDCC00F2207CE13200BEFDAA /* caesar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caesar.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				DDF07868207B612D00B9EBF6 /* TouchBar Controller.swift */,
 				DDCC00ED207CD5FE00BEFDAA /* expectedExt.swift */,
 				DDF3682E207E638500ACCD06 /* CrypTools-Bridging-Header.h */,
+				DD59B378207F864800BA3C99 /* Window.swift */,
 			);
 			path = CrypTools;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				DD1877A7207F292300BBCA82 /* Rail.swift in Sources */,
 				DD3E5BC6207E5DC20059356E /* XOR.swift in Sources */,
+				DD59B379207F864800BA3C99 /* Window.swift in Sources */,
 				DDCC00F5207CE28000BEFDAA /* Emoji.swift in Sources */,
 				DD1877AB207F3A1A00BBCA82 /* ROT13.swift in Sources */,
 				DD528B99207BA17500BA945D /* b64.swift in Sources */,

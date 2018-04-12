@@ -277,6 +277,12 @@ SWIFT_CLASS("_TtC9CrypTools14ViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC9CrypTools6Window")
+@interface Window : NSWindow
+- (nonnull instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)style backing:(NSBackingStoreType)backingStoreType defer:(BOOL)flag OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif

@@ -779,12 +779,12 @@
         <!--Tab View controller-->
         <scene sceneID="xbn-4x-WrP">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" canPropagateSelectedChildViewControllerTitle="NO" id="074-Px-X0u" customClass="TabView_controller" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" canPropagateSelectedChildViewControllerTitle="NO" id="074-Px-X0u" customClass="TabView_controller" customModule="CrypTools" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="EKp-Xt-YZ0"/>
                         <tabViewItem identifier="" id="ViL-HF-OmD"/>
                     </tabViewItems>
-                    <viewControllerTransitionOptions key="transitionOptions" slideLeft="YES" slideForward="YES" allowUserInteraction="YES"/>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="dZ6-Lz-yCL">
                         <rect key="frame" x="0.0" y="-1" width="450" height="301"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1017,7 +1017,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TYJ-Of-pKQ">
-                                    <rect key="frame" x="347" y="0.0" width="15" height="108"/>
+                                    <rect key="frame" x="347" y="0.0" width="15" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1049,7 +1049,7 @@
                 </viewController>
                 <customObject id="e1W-Iq-IEb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="884"/>
+            <point key="canvasLocation" x="1159" y="987"/>
         </scene>
     </scenes>
 </document>
