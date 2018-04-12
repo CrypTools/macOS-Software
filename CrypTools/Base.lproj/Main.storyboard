@@ -957,17 +957,6 @@
                                     </connections>
                                 </popUpButtonCell>
                             </popUpButton>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="GfW-CD-O8s">
-                                <rect key="frame" x="42" y="20" width="366" height="122"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="bRN-p4-cUD"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" sendsActionOnEndEditing="YES" title="Multiline Label" id="VXE-I6-8Nw">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-2Z-I6i">
                                 <rect key="frame" x="321" y="172" width="86" height="32"/>
                                 <constraints>
@@ -996,21 +985,56 @@
                                     <action selector="Hash:" target="ssC-zh-3In" id="VCk-r0-kiz"/>
                                 </connections>
                             </textField>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="lSF-fz-pek">
+                                <rect key="frame" x="39" y="70" width="362" height="40"/>
+                                <clipView key="contentView" copiesOnScroll="NO" id="0QY-CR-7Hq">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQz-hd-Uxs">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfW-CD-O8s">
+                                                    <rect key="frame" x="9" y="8" width="343" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" sendsActionOnEndEditing="YES" title="Multiline Label" placeholderString="Output" id="VXE-I6-8Nw">
+                                                        <font key="font" size="13" name="RobotoMono-Regular"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" red="0.76855933666229248" green="0.76867109537124634" blue="0.76853489875793457" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UDU-Li-wVf"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="28n-ao-Ble">
+                                    <rect key="frame" x="-100" y="-100" width="347" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TYJ-Of-pKQ">
+                                    <rect key="frame" x="347" y="0.0" width="15" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="0UL-pI-s35"/>
-                            <constraint firstItem="GfW-CD-O8s" firstAttribute="centerX" secondItem="5Mf-vP-GZX" secondAttribute="centerX" id="B30-LW-iBf"/>
                             <constraint firstAttribute="trailing" secondItem="XpU-LH-yEQ" secondAttribute="trailing" constant="44" id="BU7-fD-3Ot"/>
-                            <constraint firstItem="GfW-CD-O8s" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="DAd-y8-5kp"/>
                             <constraint firstItem="3bl-eG-oFT" firstAttribute="top" secondItem="5Mf-vP-GZX" secondAttribute="top" constant="20" id="Jua-ms-q0e"/>
                             <constraint firstItem="Dxe-2Z-I6i" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="25" id="NdR-0U-cj2"/>
+                            <constraint firstAttribute="bottom" secondItem="lSF-fz-pek" secondAttribute="bottom" constant="70" id="TaJ-AQ-TiE"/>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="15" id="Vn2-Ih-VMQ"/>
-                            <constraint firstItem="GfW-CD-O8s" firstAttribute="top" secondItem="XpU-LH-yEQ" secondAttribute="bottom" constant="5" id="XTH-QB-vvD"/>
                             <constraint firstItem="x2d-7g-WNh" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="XwF-wi-E4y"/>
+                            <constraint firstItem="lSF-fz-pek" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="39" id="c4r-IJ-Pr7"/>
+                            <constraint firstAttribute="trailing" secondItem="lSF-fz-pek" secondAttribute="trailing" constant="49" id="ecV-1b-YIH"/>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="15" id="eqV-0m-3y7"/>
                             <constraint firstItem="3bl-eG-oFT" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="hU8-DV-K7Z"/>
                             <constraint firstAttribute="trailing" secondItem="Dxe-2Z-I6i" secondAttribute="trailing" constant="49" id="nxv-BS-vMT"/>
-                            <constraint firstAttribute="trailing" secondItem="GfW-CD-O8s" secondAttribute="trailing" constant="44" id="pp0-t3-ojZ"/>
                             <constraint firstAttribute="trailing" secondItem="3bl-eG-oFT" secondAttribute="trailing" constant="44" id="ru6-Iw-Lyc"/>
                             <constraint firstItem="XpU-LH-yEQ" firstAttribute="top" secondItem="Dxe-2Z-I6i" secondAttribute="bottom" constant="4" id="y4o-AC-Vdt"/>
                             <constraint firstItem="x2d-7g-WNh" firstAttribute="top" secondItem="X6o-Vc-Sbk" secondAttribute="bottom" constant="15" id="zDP-fy-8ox"/>
