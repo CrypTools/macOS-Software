@@ -10,43 +10,43 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		fWR/vEPqHt/MOvdbbxPVLc/qLmY=
+		LfPZh7XQ6rIYG5haaCYg7PuXX5w=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		JGjzBR62ypFdLKD3VebTxYgV9ds=
+		/rYK3aFUsJKJ94wv9E3m3KxV7a8=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib/keyedobjects-101201.nib</key>
 		<data>
-		LA7pkxCzqcboQx7mlQn5rr8F2Kc=
+		+h6QHEBJr6IeJ0HPMSwNMZA9u1o=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib/keyedobjects.nib</key>
 		<data>
-		//d5iQVd+MV1g30SQ4EZqm65y1o=
+		ZnwiWnEFbf+2UXJOGr/maLdMGRE=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MsW-Ko-qIu-view-fjG-aB-Oko.nib/keyedobjects-101201.nib</key>
 		<data>
-		Mux9SR+KkcvgA3/VR/9jAwVc4yQ=
+		KG0PQ8WfvAb+/lWI/dMMx7AdaMg=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MsW-Ko-qIu-view-fjG-aB-Oko.nib/keyedobjects.nib</key>
 		<data>
-		QpGI09l5bMEgtlYLO1+eW7vUXV0=
+		/+zAQq9PIX6IpSM4d7r79zqGU9E=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib/keyedobjects-101201.nib</key>
 		<data>
-		9lnfFoBdK7YfCvfyVzuEu6fn+fk=
+		QSRVnc1LKzfIXXknNMLOlY1gdzI=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib/keyedobjects.nib</key>
 		<data>
-		2sleiuH21K31Suaklf2440mEKz0=
+		ULFPGa0ZTDa95jpI9eWHciv64jE=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/ssC-zh-3In-view-5Mf-vP-GZX.nib/keyedobjects-101201.nib</key>
 		<data>
-		xn+HU3/3PQkZc+lb/FHUNBOz/i8=
+		K6jfCh8U2CWty1HOLBX5VwYCGOE=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/ssC-zh-3In-view-5Mf-vP-GZX.nib/keyedobjects.nib</key>
 		<data>
-		hHBvEi0Wb0Y5O31uvR4tkYPc8wY=
+		/GUSZstlbX6HWD62oxa3K3FkdN8=
 		</data>
 		<key>Resources/en.lproj/Main.strings</key>
 		<dict>
@@ -73,6 +73,15 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/DockProgress.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			njjh+A5YwjCSoxyBpn/sxmrxwis=
+			</data>
+			<key>requirement</key>
+			<string>identifier DockProgress and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: arguiot@gmail.com (U35D2244NJ)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+		</dict>
 		<key>Frameworks/libswiftAppKit.dylib</key>
 		<dict>
 			<key>cdhash</key>
@@ -223,110 +232,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fWR/vEPqHt/MOvdbbxPVLc/qLmY=
+			LfPZh7XQ6rIYG5haaCYg7PuXX5w=
 			</data>
 			<key>hash2</key>
 			<data>
-			k3IZROBeoHxKeF99JAAk9AJvEkpc5umQNsJxdnhFtV4=
+			xoP0O1Lm/okPsA6Vy1AZL+ll2SY994d5NfcHtO728BI=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JGjzBR62ypFdLKD3VebTxYgV9ds=
+			/rYK3aFUsJKJ94wv9E3m3KxV7a8=
 			</data>
 			<key>hash2</key>
 			<data>
-			OXcMe+unhUoVnNIF89ET7uiWOAlEw6MN8nG3HjBy++A=
+			6Jzm5F0xZjxR5xwMv9LyBMjW+gzkrNrKTIJdgce3XIA=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib/keyedobjects-101201.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LA7pkxCzqcboQx7mlQn5rr8F2Kc=
+			+h6QHEBJr6IeJ0HPMSwNMZA9u1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			AdL9oQMoRgW7MZhWVHYSs8ONO/0gJcaEva7UdaNtbFs=
+			y0opKNTjCLi5wKWdsBNLAM160PZW3KVOQ7tQuzQyHIM=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib/keyedobjects.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			//d5iQVd+MV1g30SQ4EZqm65y1o=
+			ZnwiWnEFbf+2UXJOGr/maLdMGRE=
 			</data>
 			<key>hash2</key>
 			<data>
-			grr2MY9ryqf9gtkT9tLfFsD73TqirOebI2dPd05kaPY=
+			/ylxSZXxYCZZ4qmHqx2+3S7SJxbNT2NwRM5vDrrNoTY=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MsW-Ko-qIu-view-fjG-aB-Oko.nib/keyedobjects-101201.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Mux9SR+KkcvgA3/VR/9jAwVc4yQ=
+			KG0PQ8WfvAb+/lWI/dMMx7AdaMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			o3B4wtXjA5LcS3TMwbu60ZWd9VMV5rY4cTPAknuFe+U=
+			yd77tyGX7Huv9+++NShjDzaGVmqjFbvI2RCThUgDitU=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MsW-Ko-qIu-view-fjG-aB-Oko.nib/keyedobjects.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QpGI09l5bMEgtlYLO1+eW7vUXV0=
+			/+zAQq9PIX6IpSM4d7r79zqGU9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			tgWxW5sMFZ1wrjrKxhYOB6w7z1sRhEL5DTYvqSfNu00=
+			ebwvtcs+hxY1GcQ1dWPBNuzVlFluuAtMuzMzcCpcwq8=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib/keyedobjects-101201.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9lnfFoBdK7YfCvfyVzuEu6fn+fk=
+			QSRVnc1LKzfIXXknNMLOlY1gdzI=
 			</data>
 			<key>hash2</key>
 			<data>
-			V4av/axpHp4thRj5XfvCSFnibXTqzuUDE6ccELoUBo8=
+			eG9w2gBAARrhbKlmtF3QrxxSud9TvSWe0f8EOeOVecA=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib/keyedobjects.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2sleiuH21K31Suaklf2440mEKz0=
+			ULFPGa0ZTDa95jpI9eWHciv64jE=
 			</data>
 			<key>hash2</key>
 			<data>
-			f6dZ3M9HzX0sT0Vhiikj3xhLRw6hYTDHCMo0lQ+lWPA=
+			8A1qoWZ8+MN0yQ66kOhDXlW+yXXY6pqo2BcQ7aKmQHo=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/ssC-zh-3In-view-5Mf-vP-GZX.nib/keyedobjects-101201.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xn+HU3/3PQkZc+lb/FHUNBOz/i8=
+			K6jfCh8U2CWty1HOLBX5VwYCGOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			k6N5u2xI3e9TK50agFAAiWDRGcrAadQtXr6mU1eT7r8=
+			YiKedPR3Rynv9FSyDt83DIJsJQMXllXUGZCKMZfk3FY=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/ssC-zh-3In-view-5Mf-vP-GZX.nib/keyedobjects.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hHBvEi0Wb0Y5O31uvR4tkYPc8wY=
+			/GUSZstlbX6HWD62oxa3K3FkdN8=
 			</data>
 			<key>hash2</key>
 			<data>
-			qDcMcWPmkyLhsOr61SIGhYEBd8hFvBKnYDvs2+RtkpQ=
+			LoIXvSQ/OLZvARmmTikT0SZTC++w1BN9Bx6OF5Fc4GE=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Main.strings</key>

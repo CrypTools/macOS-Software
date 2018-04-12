@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import DockProgress
 
 class DropView: NSView {
     
@@ -23,7 +24,9 @@ class DropView: NSView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+		
+		DockProgress.style = .circle(radius: 62, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+		
         self.wantsLayer = true
         self.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor
         
@@ -94,6 +97,7 @@ class DropView: NSView {
         self.coder = Ciphers().name[i]
     }
     @IBAction func ToggleEncrypt(_ sender: Any) {
+		DockProgress.progressValue = 0
         func dialogOKCancel(question: String, text: String) -> Bool {
             let alert = NSAlert()
             alert.messageText = question
@@ -109,22 +113,26 @@ class DropView: NSView {
         Load.isHidden = false
         do {
             let input = try NSString( contentsOfFile: self.filePath!, encoding: String.Encoding.utf8.rawValue )
+			DockProgress.progressValue = 0.5
             let save = NSSavePanel()
             save.begin(completionHandler: {
                 result in
                 let c = Ciphers()
                 let fe = c.get(self.coder)
                 let text = fe(input as String, self.Key.stringValue)
+				DockProgress.progressValue = 0.9
                 if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
                     let filename = save.url
                     do {
                         try text.write(to: filename!, atomically: true, encoding: String.Encoding.utf8)
                         _ = dialogOKCancel(question: "Done", text: "Your file was succefully saved at \(save.url!)")
+						DockProgress.progressValue = 1
                     } catch {
                         _ = dialogOKCancel(question: "Error 1", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
                     }
                 }
             })
+			DockProgress.progressValue = 0
         } catch {
             _ = dialogOKCancel(question: "Error 0", text: "Sorry, but something wrong happened.\nPlease inform the CrypTools developers of this error by submitting an issue on GitHub.")
         }

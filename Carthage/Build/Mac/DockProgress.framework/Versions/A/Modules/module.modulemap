@@ -1,0 +1,4 @@
+framework module DockProgress {
+    header "DockProgress-Swift.h"
+    requires objc
+}

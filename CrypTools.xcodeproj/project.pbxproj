@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0E6084207F9CA30074947E /* DockProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0E6082207F9CA20074947E /* DockProgress.framework */; };
+		DD0E6085207F9CA30074947E /* DockProgress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD0E6082207F9CA20074947E /* DockProgress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD1877A7207F292300BBCA82 /* Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1877A6207F292300BBCA82 /* Rail.swift */; };
 		DD1877AB207F3A1A00BBCA82 /* ROT13.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1877AA207F3A1900BBCA82 /* ROT13.swift */; };
 		DD3E5BC6207E5DC20059356E /* XOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E5BC5207E5DC20059356E /* XOR.swift */; };
@@ -32,7 +34,23 @@
 		DDF36832207E641F00ACCD06 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF36831207E641F00ACCD06 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DD0E6086207F9CA30074947E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD0E6085207F9CA30074947E /* DockProgress.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DD0E6082207F9CA20074947E /* DockProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DockProgress.framework; path = Carthage/Build/Mac/DockProgress.framework; sourceTree = "<group>"; };
+		DD0E6083207F9CA30074947E /* DockProgress.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = DockProgress.framework.dSYM; path = Carthage/Build/Mac/DockProgress.framework.dSYM; sourceTree = "<group>"; };
 		DD1877A6207F292300BBCA82 /* Rail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rail.swift; sourceTree = "<group>"; };
 		DD1877AA207F3A1900BBCA82 /* ROT13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROT13.swift; sourceTree = "<group>"; };
 		DD3E5BC5207E5DC20059356E /* XOR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOR.swift; sourceTree = "<group>"; };
@@ -70,17 +88,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0E6084207F9CA30074947E /* DockProgress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0E6080207F9B5D0074947E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDF0783A207AFC7800B9EBF6 = {
 			isa = PBXGroup;
 			children = (
+				DD0E6082207F9CA20074947E /* DockProgress.framework */,
+				DD0E6083207F9CA30074947E /* DockProgress.framework.dSYM */,
 				DDF07845207AFC7800B9EBF6 /* CrypTools */,
 				DDF07844207AFC7800B9EBF6 /* Products */,
+				DD0E6080207F9B5D0074947E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +206,7 @@
 				DDF07840207AFC7800B9EBF6 /* Frameworks */,
 				DDF07841207AFC7800B9EBF6 /* Resources */,
 				DD1877A5207F10E500BBCA82 /* ShellScript */,
+				DD0E6086207F9CA30074947E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -417,6 +447,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CrypTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,6 +476,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TT6KKS6MS8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CrypTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

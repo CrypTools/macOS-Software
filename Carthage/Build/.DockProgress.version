@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+
+  ],
+  "commitish" : "v1.0.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+    {
+      "hash" : "6c2cf39e65614801c650910e9fef8d172efa33c3fffb824676ec5f2f649470ee",
+      "name" : "DockProgress"
+    }
+  ]
+}
