@@ -986,7 +986,7 @@
                                 </connections>
                             </textField>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="lSF-fz-pek">
-                                <rect key="frame" x="39" y="70" width="362" height="40"/>
+                                <rect key="frame" x="44" y="70" width="362" height="40"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="0QY-CR-7Hq">
                                     <rect key="frame" x="0.0" y="0.0" width="362" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1024,14 +1024,16 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="0UL-pI-s35"/>
+                            <constraint firstItem="lSF-fz-pek" firstAttribute="centerX" secondItem="5Mf-vP-GZX" secondAttribute="centerX" id="BKU-yn-r9b"/>
                             <constraint firstAttribute="trailing" secondItem="XpU-LH-yEQ" secondAttribute="trailing" constant="44" id="BU7-fD-3Ot"/>
                             <constraint firstItem="3bl-eG-oFT" firstAttribute="top" secondItem="5Mf-vP-GZX" secondAttribute="top" constant="20" id="Jua-ms-q0e"/>
                             <constraint firstItem="Dxe-2Z-I6i" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="25" id="NdR-0U-cj2"/>
                             <constraint firstAttribute="bottom" secondItem="lSF-fz-pek" secondAttribute="bottom" constant="70" id="TaJ-AQ-TiE"/>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="15" id="Vn2-Ih-VMQ"/>
                             <constraint firstItem="x2d-7g-WNh" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="XwF-wi-E4y"/>
-                            <constraint firstItem="lSF-fz-pek" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="39" id="c4r-IJ-Pr7"/>
-                            <constraint firstAttribute="trailing" secondItem="lSF-fz-pek" secondAttribute="trailing" constant="49" id="ecV-1b-YIH"/>
+                            <constraint firstItem="3bl-eG-oFT" firstAttribute="centerX" secondItem="5Mf-vP-GZX" secondAttribute="centerX" id="a8S-Mh-GEz"/>
+                            <constraint firstItem="lSF-fz-pek" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="c4r-IJ-Pr7"/>
+                            <constraint firstAttribute="trailing" secondItem="lSF-fz-pek" secondAttribute="trailing" constant="44" id="ecV-1b-YIH"/>
                             <constraint firstItem="X6o-Vc-Sbk" firstAttribute="top" secondItem="3bl-eG-oFT" secondAttribute="bottom" constant="15" id="eqV-0m-3y7"/>
                             <constraint firstItem="3bl-eG-oFT" firstAttribute="leading" secondItem="5Mf-vP-GZX" secondAttribute="leading" constant="44" id="hU8-DV-K7Z"/>
                             <constraint firstAttribute="trailing" secondItem="Dxe-2Z-I6i" secondAttribute="trailing" constant="49" id="nxv-BS-vMT"/>
