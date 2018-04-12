@@ -692,6 +692,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="525" y="345" width="512" height="320"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
+                        <value key="minSize" type="size" width="512" height="320"/>
                         <toolbar key="toolbar" implicitIdentifier="9DA6907A-C45B-4FE3-B45A-40FD7FFCD680" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconAndLabel" sizeMode="regular" id="zQo-A6-IWK">
                             <allowedToolbarItems/>
                             <defaultToolbarItems/>

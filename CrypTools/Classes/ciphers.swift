@@ -65,6 +65,10 @@ class Ciphers {
 			text, key in
 			return text.RailDecrypt(Int(key) ?? 3)
 		})
+		self.add("ROT13", {
+			text, key in
+			return text.rot13
+		})
         self.add("SHA256", {
             text, key in
             return text.sha256
