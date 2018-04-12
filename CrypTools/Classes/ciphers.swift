@@ -53,11 +53,19 @@ class Ciphers {
             text, key in
             return text.EmojiDecrypt
         })
-        self.add("md5", {
+        self.add("MD5", {
             text, key in
             return text.md5
         })
-        self.add("sha256", {
+        self.add("Rail Fence - Encrypt", {
+            text, key in
+			return text.RailEncrypt(Int(key) ?? 3)
+        })
+		self.add("Rail Fence - Decrypt", {
+			text, key in
+			return text.RailDecrypt(Int(key) ?? 3)
+		})
+        self.add("SHA256", {
             text, key in
             return text.sha256
         })

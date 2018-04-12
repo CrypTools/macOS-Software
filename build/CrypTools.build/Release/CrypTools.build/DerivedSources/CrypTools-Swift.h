@@ -241,7 +241,6 @@ SWIFT_CLASS("_TtC9CrypTools14TextController")
 - (IBAction)Encoder:(id _Nonnull)sender;
 - (IBAction)Hash:(id _Nullable)sender;
 @property (nonatomic) id _Nullable representedObject;
-- (void)keyDown:(NSEvent * _Nonnull)event;
 - (nonnull instancetype)initWithNibName:(NSNibName _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -255,7 +254,7 @@ SWIFT_CLASS("_TtC9CrypTools8TextView")
 @end
 
 
-SWIFT_CLASS("_TtC9CrypTools19TouchBar_Controller")
+SWIFT_CLASS("_TtC9CrypTools19TouchBar_Controller") SWIFT_AVAILABILITY(macos,introduced=10.12.2)
 @interface TouchBar_Controller : NSTouchBar
 - (IBAction)Learn:(id _Nonnull)sender;
 - (IBAction)GitHub:(id _Nonnull)sender;

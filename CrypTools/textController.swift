@@ -29,7 +29,7 @@ class TextController: NSViewController {
         CipherSelect.addItems(withTitles: c.name)
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
-            self.keyDown(with: $0)
+            self.keyEv(with: $0)
             return $0
         }
     }
@@ -56,7 +56,7 @@ class TextController: NSViewController {
             // Update the view, if already loaded.
         }
     }
-    override func keyDown(with event: NSEvent) {
+    func keyEv(with event: NSEvent) {
         super.keyDown(with: event)
         Hash(nil)
     }

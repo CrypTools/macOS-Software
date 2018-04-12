@@ -27,7 +27,11 @@ class DropView: NSView {
         self.wantsLayer = true
         self.layer?.backgroundColor = NSColor.hexColor(rgbValue: 0x292929).cgColor
         
-        registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
+		if #available(OSX 10.13, *) {
+			registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
+		} else {
+			// Fallback on earlier versions
+		}
     }
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
         return true

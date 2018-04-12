@@ -8,6 +8,7 @@
 
 import Cocoa
 
+@available(OSX 10.12.2, *)
 class TouchBar_Controller: NSTouchBar {
     @IBAction func Learn(_ sender: Any) {
         NSWorkspace.shared.open(URL(string: "https://github.com/CrypTools")!)
